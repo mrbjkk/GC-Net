@@ -1,7 +1,7 @@
 import re
 import numpy as np
 import sys
- 
+
 
 def readPFM(file):
     file = open(file, 'rb')
@@ -47,8 +47,8 @@ def writePFM(file, image, scale=1):
 
     if image.dtype.name != 'float32':
         raise Exception('Image dtype must be float32.')
-      
-    image = np.flipud(image)  
+
+    image = np.flipud(image)
 
     if len(image.shape) == 3 and image.shape[2] == 3: # color image
         color = True

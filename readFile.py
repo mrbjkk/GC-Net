@@ -17,9 +17,9 @@ for root, dirs, files in os.walk(dir_monkk):
 paths_left=[]
 paths_right=[]
 for i in range(len(paths)):
-	if paths[i].find('left')>-1:
+	if paths[i].find('left') > -1:
 		paths_left.append(paths[i])
-	elif paths[i].find('right')>-1:
+	elif paths[i].find('right') > -1:
 		paths_right.append(paths[i])
 foutl=open('paths_left_train.pkl','wb')
 foutr=open('paths_right_train.pkl','wb')

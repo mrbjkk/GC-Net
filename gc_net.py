@@ -103,7 +103,7 @@ class GC_NET(nn.Module):
         conv3d_block_3=self.block_3d_3(conv3d_24)
         conv3d_27=F.relu(self.bn3d_5(self.conv3d_5(conv3d_24)))
         conv3d_block_4=self.block_3d_4(conv3d_27)
-        
+
         #deconv
         deconv3d=F.relu(self.debn1(self.deconv1(conv3d_block_4))+conv3d_block_3)
         deconv3d=F.relu(self.debn2(self.deconv2(deconv3d))+conv3d_block_2)
